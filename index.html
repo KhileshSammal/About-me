@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS "Lens & Latitude" | Independent Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+        :root {
+            --slate-primary: #0a0a0a;
+            --stone-bg: #ffffff;
+            --accent-yellow: #facc15; 
+            --subtle-grey: #f5f5f5;
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--accent-yellow); }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--stone-bg);
+            color: var(--slate-primary);
+            letter-spacing: -0.02em;
+            scroll-behavior: smooth;
+        }
+
+        .serif { font-family: 'Playfair Display', serif; }
+
+        .nav-link {
+            position: relative;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover { color: var(--slate-primary); }
+        .nav-link:hover::after { width: 100%; }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-yellow);
+            transition: width 0.3s ease;
+        }
+
+        .stack-item {
+            border-top: 1px solid #e5e5e5;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .stack-item:hover {
+            background-color: #fafafa;
+            border-top-color: var(--accent-yellow);
+            padding-left: 1rem;
+        }
+
+        .yellow-accent-box {
+            box-shadow: 12px 12px 0px var(--accent-yellow);
+        }
+
+        .section-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+
+        .hero-title {
+            filter: drop-shadow(4px 4px 0px rgba(250, 204, 21, 0.15));
+        }
+
+        .highlight-text {
+            position: relative;
+            display: inline-block;
+        }
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: rgba(250, 204, 21, 0.4);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-yellow-200">
+
+    <!-- Header / Branding -->
+    <header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-xl border-b border-stone-100">
+        <div class="max-w-7xl mx-auto px-8 md:px-12">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-4">
+                    <span class="serif text-3xl font-bold tracking-tighter bg-black text-white px-2 py-0.5">KS</span>
+                    <div class="h-6 w-[2px] bg-yellow-400"></div>
+                    <span class="text-[10px] uppercase tracking-[0.4em] font-black text-slate-900">Lens & Latitude</span>
+                </div>
+                <nav class="hidden lg:flex space-x-12">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#stack" class="nav-link">Tech Stack</a>
+                    <a href="#pedigree" class="nav-link">Pedigree</a>
+                    <a href="#how" class="nav-link">Process</a>
+                </nav>
+                <div>
+                    <a href="#footer-connect" class="text-[10px] uppercase tracking-widest font-black border-b-2 border-yellow-400 pb-1 hover:border-black transition-all">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        
+        <!-- Hero Narrative -->
+        <section id="about" class="max-w-7xl mx-auto px-8 md:px-12 py-12 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-1 hidden lg:block">
+                    <span class="section-label text-[10px] uppercase tracking-[0.6em] text-stone-400 font-bold py-4">Direct Access</span>
+                </div>
+                <div class="lg:col-span-11 space-y-10">
+                    <div class="text-[10px] font-black uppercase tracking-widest text-stone-400 flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                        <span>Independent Performance Consultant</span>
+                    </div>
+                    <h1 class="serif text-6xl md:text-9xl leading-[0.9] tracking-tighter text-black hero-title">
+                        Crafting <br>
+                        <span class="italic text-stone-300">Growth.</span>
+                    </h1>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 pt-12">
+                        <p class="text-xl md:text-2xl text-stone-600 font-light leading-relaxed">
+                            I help high-growth brands solve the gap between media spend and measurement. No middle-men, just 
+                            <span class="highlight-text text-black font-medium">technical precision</span> across Meta, Google, and your data stack.
+                        </p>
+                        <div class="flex flex-col justify-end space-y-6">
+                            <div class="h-[1px] w-full bg-stone-100"></div>
+                            <p class="text-sm text-stone-400 leading-relaxed font-light">
+                                Operating as a solo partner, I integrate directly into your workflow to build systems that scale without the agency overhead.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section id="stack" class="bg-black py-32">
+            <div class="max-w-7xl mx-auto px-8 md:px-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-4">
+                    <div class="space-y-2">
+                        <h2 class="serif text-4xl md:text-6xl text-white italic">My Tech Stack</h2>
+                        <p class="text-stone-500 text-xs uppercase tracking-widest font-bold">Tools I use to move the needle</p>
+                    </div>
+                    <div class="h-[1px] flex-grow mx-8 bg-white/10 hidden md:block"></div>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-yellow-400 font-black mb-2">Technical Proficiency</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
+                    <!-- Media -->
+                    <div class="space-y-8">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-stone-600">Paid Media</span>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Google Ads</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Search / PMax Optimization</p>
+                            </div>
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Meta Ads</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Scaling Creative Strategy</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Measurement -->
+                    <div class="space-y-8">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-stone-600">Measurement</span>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">GA4 & GTM</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Advanced Tracking Architecture</p>
+                            </div>
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Tracocity</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">First-Party Attribution Audits</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Integration -->
+                    <div class="space-y-8">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-stone-600">AI Intelligence</span>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Google AI Studio</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Custom LLM Workflows</p>
+                            </div>
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Gemini & ChatGPT</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Strategy & Copy Automation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Operations -->
+                    <div class="space-y-8">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-stone-600">Operations</span>
+                        <div class="space-y-6">
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Canva Pro</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Direct Ad Creative Design</p>
+                            </div>
+                            <div class="group">
+                                <h4 class="text-2xl text-white font-light group-hover:text-yellow-400 transition-colors">Python & SQL</h4>
+                                <p class="text-[10px] text-stone-500 uppercase mt-2 font-bold">Automation / Reporting Scripts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pedigree Section -->
+        <section id="pedigree" class="py-32 border-b border-stone-100">
+            <div class="max-w-7xl mx-auto px-8 md:px-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-4">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-yellow-500 mb-6 block">Foundation</span>
+                        <h2 class="serif text-5xl italic leading-tight">Learned from <br> the Best.</h2>
+                        <p class="text-stone-500 font-light mt-8 leading-relaxed">
+                            My expertise isn't accidental. It was forged in high-stakes environments, absorbing the internal mechanics of the world's most sophisticated marketing ecosystems.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-1 px-0 bg-stone-100">
+                        <div class="bg-white p-10 space-y-4">
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Cognizant</h4>
+                            <p class="text-sm text-stone-400 font-light">Mastering enterprise-level digital delivery and technical workflows.</p>
+                        </div>
+                        <div class="bg-white p-10 space-y-4 border-l border-stone-100">
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Internal Google Docs</h4>
+                            <p class="text-sm text-stone-400 font-light">Deep access to Google's proprietary methodologies for search and audience intelligence.</p>
+                        </div>
+                        <div class="bg-white p-10 space-y-4 border-t border-stone-100">
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Baweja Media</h4>
+                            <p class="text-sm text-stone-400 font-light">Cutting-edge performance scaling for disruptive digital brands.</p>
+                        </div>
+                        <div class="bg-white p-10 space-y-4 border-t border-l border-stone-100">
+                            <h4 class="font-bold text-xs uppercase tracking-widest">Global Standards</h4>
+                            <p class="text-sm text-stone-400 font-light italic">Trained at the industry's peak, I apply Google Ads and Meta Ads tactics used by top 1% practitioners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="how" class="max-w-7xl mx-auto px-8 md:px-12 py-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <span class="text-[10px] uppercase tracking-widest font-black text-stone-400">How I Work</span>
+                        <h3 class="serif text-5xl md:text-6xl italic leading-tight">Expertise <br> Without the Ego.</h3>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6">
+                            <span class="serif text-3xl italic text-yellow-400">01</span>
+                            <div>
+                                <h5 class="font-bold text-sm uppercase tracking-widest mb-2">Direct Collaboration</h5>
+                                <p class="text-stone-500 text-sm font-light leading-relaxed">You work with me, not an account manager. I'm deep in the accounts, ensuring every strategy is executed with personal accountability.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6">
+                            <span class="serif text-3xl italic text-yellow-400">02</span>
+                            <div>
+                                <h5 class="font-bold text-sm uppercase tracking-widest mb-2">Technical Rigor</h5>
+                                <p class="text-stone-500 text-sm font-light leading-relaxed">I don't just "run ads." I audit pixels, verify data layers, and ensure your tracking is resilient to privacy changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-stone-50 p-12 lg:p-16 border-l-8 border-yellow-400 yellow-accent-box relative">
+                    <div class="space-y-8">
+                        <h4 class="serif text-3xl font-bold">Why me?</h4>
+                        <p class="text-stone-600 font-light leading-relaxed">
+                            Brands hire me when they are tired of "black box" reporting. I offer complete transparency, a customized tech stack, and a focus on <span class="font-bold text-black italic">Net Revenue</span> rather than vanity metrics.
+                        </p>
+                        <div class="pt-6 border-t border-stone-200">
+                            <p class="text-[10px] font-black uppercase tracking-[0.2em] text-stone-400 mb-4">Availability</p>
+                            <div class="flex items-center space-x-3">
+                                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                <span class="text-sm font-medium">Taking selective projects for Q1 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer-connect" class="bg-black text-white py-24">
+        <div class="max-w-7xl mx-auto px-8 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-4">
+                        <span class="serif text-4xl font-bold tracking-tighter bg-yellow-400 text-black px-2">KS</span>
+                        <div class="h-8 w-[1px] bg-white/20"></div>
+                        <span class="text-xs uppercase tracking-[0.4em] font-black">Lens & Latitude</span>
+                    </div>
+                    <p class="text-[9px] uppercase tracking-[0.3em] text-stone-500 font-bold max-w-xs leading-loose">
+                        Khilesh Sammal — Independent Performance Strategist. Working from India, scaling globally.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-x-12 gap-y-6 text-[10px] uppercase tracking-widest font-black">
+                    <a href="mailto:khileshsammal.work@gmail.com" class="hover:text-yellow-400 transition-colors">Email</a>
+                    <a href="https://in.linkedin.com/in/khilesh-sammal" target="_blank" class="hover:text-yellow-400 transition-colors">LinkedIn</a>
+                    <a href="#" class="hover:text-yellow-400 transition-colors">Work</a>
+                    <a href="#" class="hover:text-yellow-400 transition-colors">Curriculum Vitae</a>
+                </div>
+            </div>
+            <div class="mt-24 pt-8 border-t border-white/5 flex justify-between items-center text-[8px] text-stone-600 uppercase tracking-[0.5em] font-medium">
+                <span>© 2026 Khilesh Sammal — KS Independent</span>
+                <span class="text-yellow-400/50 italic">Crafted with precision</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
